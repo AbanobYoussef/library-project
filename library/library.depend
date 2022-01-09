@@ -1,0 +1,17 @@
+# depslib dependency file v1.0
+1641740600 source:f:\library-project\library\main.c
+	<stdio.h>
+	<stdlib.h>
+	"Book.h"
+	"dynamicArray.h"
+	<windows.h>
+
+1641503970 f:\library-project\library\include\linkedlist.h
+	"book.h"
+
+1641665995 f:\library-project\library\include\book.h
+
+1641667758 f:\library-project\library\include\dynamicarray.h
+	<string.h>
+	"Book.h"
+
