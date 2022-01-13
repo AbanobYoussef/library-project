@@ -7,7 +7,7 @@ typedef struct book {
     char name[225];
     char auther[225];
 }Book;
-int BookId ;
+int BookId=0 ;
  Book assignBook( char Name[] , char Auther[]){
      Book _book;
 

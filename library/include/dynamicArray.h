@@ -25,6 +25,7 @@ void insertArray(Array *a, Book element) {
     a->size *= 2;
     a->array = realloc(a->array, a->size * sizeof(Book));
   }
+BookId++;
   a->array[a->used++] = element;
 }
 
@@ -35,28 +36,27 @@ void freeArray(Array *a) {
 }
 
 
-Book seachById(Array books , int id){
+int seachById(Array books , int id){
 
     for(int i = 0; i<books.used;i++)
           if(books.array[i].ID==id)
-              return (books.array[i]);
+              return (i);
 
-    Book _book;
-    _book.ID=-1;
-    return (_book);
+
+    return (-1);
 }
 
 
-Book seachByName(Array books , char Name[]){
+int seachByName(Array books , char Name[]){
 
     for(int i = 0; i<books.used;i++)
           if(strcmp(books.array[i].name, Name)==0)
-              return (books.array[i]);
+              return (i);
 
-    Book _book;
-    _book.ID=-1;
-    return (_book);
+    return (-1);
 }
+
+
 
 
 void delete(Array *_array ,int pos ){
@@ -103,7 +103,6 @@ void loadFromfile(Array *_array){
     Book _book;
     while(fread(&_book, sizeof(Book), 1, fPtr))
     {
-        printf("H");
         insertArray(_array, _book);
     }
 
