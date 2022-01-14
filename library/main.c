@@ -180,6 +180,7 @@ void drawLightBar(){
         start_log_menu();
         break;
     case 7:
+       saveTofile(a);
         exit(0);
 
 
