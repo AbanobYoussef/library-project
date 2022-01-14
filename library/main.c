@@ -3,6 +3,11 @@
 #include "Book.h"
 #include "dynamicArray.h"
 #include <windows.h>
+
+
+
+
+
 COORD coord= {0,0};
 void gotoxy(int x,int y);
 void draw_box_log(void);
@@ -39,14 +44,32 @@ Array a;
 int main()
 {
 
+
+/*
+Abanob Youssef
+
+آيه محي عبد الحي
+
+Ahmed zakaria abdelaziz
+
+Ibrahim Mohammed Es Sayed
+
+
+Merna osama Alawaldy
+
+*/
+
+
+
+    initArray(&a, 5);
+    loadFromfile(&a);
+
     start_log_menu();
 }
 
 /////////////////library-box//////////////////////////////////////////////////////////
 void drawLightBar(){
 
-    initArray(&a, 5);
-    loadFromfile(&a);
 
     HANDLE console = GetStdHandle(STD_OUTPUT_HANDLE);
       draw_box_library();
@@ -128,12 +151,11 @@ void drawLightBar(){
         drawLightBar(console);
     case 2:
         system("cls");
-        printf("\nEnter the book Id\n");
-         printf("Book Name : ");
+        printf("\nEnter the book Id : ");
          scanf("%d",&Bookid);
          delete(&a ,seachById(a,Bookid));
-        system("cls");
-        drawLightBar(console);
+         system("cls");
+         drawLightBar(console);
     case 3:
         system("cls");
         printBooks(a);

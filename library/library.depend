@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1642106020 source:f:\library-project\library\main.c
+1642149799 source:f:\library-project\library\main.c
 	<stdio.h>
 	<stdlib.h>
 	"Book.h"
@@ -11,7 +11,7 @@
 
 1642105673 f:\library-project\library\include\book.h
 
-1642105816 f:\library-project\library\include\dynamicarray.h
+1642150155 f:\library-project\library\include\dynamicarray.h
 	<string.h>
 	"Book.h"
 

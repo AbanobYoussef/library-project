@@ -71,13 +71,13 @@ void delete(Array *_array ,int pos ){
         /* Copy next element value to current element */
 
         int used=_array->used;
-        for( i=pos-1; i<used-1; i++)
+        for( i=pos; i<used-1; i++)
         {
             _array->array[i] = _array->array[i + 1];
         }
 
         /* Decrement array size by 1 */
-        _array->used=used--;
+        _array->used=--used;
     }
 }
 
